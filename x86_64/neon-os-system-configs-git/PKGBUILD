@@ -1,18 +1,18 @@
-# Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
-pkgname=neon-os-configs-git
+#Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
+pkgname=neon-os-system-configs-git
 pkgver=1.r12.fbca4ac
 pkgrel=1
 epoch=
-pkgdesc="config files for the neon-os arch distro"
+pkgdesc="neon-os system config files"
 arch=('x86_64')
-url="https://www.gitlab.com/NEON-MMD/dotfiles.git"
+url="https://www.gitlab.com/NEON-MMD/neon-os-system-configs.git"
 license=('GPL3')
 groups=()
 depends=()
 makedepends=(git)
 checkdepends=()
 optdepends=()
-provides=(neon-os-configs-git)
+provides=(neon-os-system-configs-git)
 conflicts=()
 replaces=()
 backup=()
@@ -27,10 +27,11 @@ validpgpkeys=()
 pkgver() {
 	cd "${_pkgname}"
     printf "1.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+
 }
 
 package() {
-    cd dotfiles
+    cd neon-os-system-configs
     mkdir -p ${pkgdir}/etc/${pkgname}
     cp -rf * ${pkgdir}/etc/${pkgname}
     install -Dm644 README.org "${pkgdir}/usr/share/doc/${pkgname}/README.org"

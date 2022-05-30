@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=universal-android-debloater-git
-pkgver=0.5.0.r11.15a21c9
+pkgver=0.5.0.r12.fbca4ac
 pkgrel=1
 epoch=
 pkgdesc="An android debloater application written in rust credit to w1nst0n (0x192) @github"
@@ -33,7 +33,7 @@ build() {
 	cd universal-android-debloater
 	rustup toolchain install nightly
 	rustup override set nightly
-	cargo build
+	cargo build --release
 }
 
 package() {
