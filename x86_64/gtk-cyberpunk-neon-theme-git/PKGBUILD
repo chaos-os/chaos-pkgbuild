@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=gtk-cyberpunk-neon-theme-git
-pkgver=1.r13.dc6308b
+pkgver=1.r15.4f02c43
 pkgrel=1
 epoch=
 pkgdesc="GTK Cyberpunk Themes credit to Roboron3042 @github.com"
