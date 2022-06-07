@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-pacman
-pkgver=1.r14.dabf7a6
+pkgver=1.r15.4f02c43
 pkgrel=1
 epoch=
 pkgdesc="Pacman config for neon-os"
