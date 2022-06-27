@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
       std::system(("cd " + std::string(entry.path()) + "&& makepkg -cf --sign").c_str());
       for (const auto & pkg : std::filesystem::directory_iterator(std::string(entry.path())))
 	  {
-	    if(std::string(pkg.path()).substr(std::string(pkg.path()).length()-3,3) == "zst" || std::string(pkg.path()).substr(std::string(pkg.path()).length()-4,3) == "zst")
+	    if(std::string(pkg.path()).substr(std::string(pkg.path()).length()-3,3) == "zst" || std::string(pkg.path()).substr(std::string(pkg.path()).length()-4,3) == "zst" || std::string(pkg.path()).substr(std::string(pkg.path()).length()-3,3) == "sig" || std::string(pkg.path()).substr(std::string(pkg.path()).length()-4,3) == "sig" )
 	      {
 		std::filesystem::rename(std::string(pkg.path()),"../neon-os-core-repo/x86_64/"+std::string(pkg.path()).substr(std::string(entry.path()).length()+1));
 	      }
