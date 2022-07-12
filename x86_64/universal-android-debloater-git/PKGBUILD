@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=universal-android-debloater-git
-pkgver=0.5.0.r15.4f02c43
+pkgver=0.5.0.r17.6a7d62d
 pkgrel=1
 epoch=
 pkgdesc="An android debloater application written in rust credit to w1nst0n (0x192) @github"
