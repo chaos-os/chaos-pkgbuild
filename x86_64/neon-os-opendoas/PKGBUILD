@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-opendoas
-pkgver=1.r17.6a7d62d
+pkgver=1.r18.3ac7892
 pkgrel=1
 epoch=
 pkgdesc="Opendoas config for neon-os"
