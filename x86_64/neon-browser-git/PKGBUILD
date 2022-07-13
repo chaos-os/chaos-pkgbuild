@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-browser-git
-pkgver=0.r18.3ac7892.BETA
+pkgver=0.r19.1803739.BETA
 pkgrel=1
 epoch=
 pkgdesc="A minimalistic web browser"
