@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-optimus-manager
-pkgver=1.r17.6a7d62d
+pkgver=1.r20.986049c
 pkgrel=1
 epoch=
 pkgdesc="Optimus manager config for neon-os"
