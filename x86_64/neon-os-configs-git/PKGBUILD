@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-configs-git
-pkgver=1.r21.367cca5
+pkgver=1.r22.eba5b2b
 pkgrel=1
 epoch=
 pkgdesc="config files for the neon-os arch distro"
@@ -32,8 +32,8 @@ pkgver() {
 package() {
     cd dotfiles
     mkdir -p ${pkgdir}/etc/${pkgname}
-    install -d .emacs.d /etc/${pkgname}
-    install -d .config /etc/${pkgname}
+    sudo cp -rf .emacs.d /etc/${pkgname} || doas -- cp -rf .emacs.d /etc/${pkgname}
+    sudo cp -rf .config /etc/${pkgname} || doas -- cp -rf .config /etc/${pkgname}
     install -Dm644 README.org "${pkgdir}/usr/share/doc/${pkgname}/README.org"
     install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
