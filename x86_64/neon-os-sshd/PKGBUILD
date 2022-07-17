@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-sshd
-pkgver=1.r20.986049c
+pkgver=1.r21.367cca5
 pkgrel=1
 epoch=
 pkgdesc="sshd config for neon-os"
