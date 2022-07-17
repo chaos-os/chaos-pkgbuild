@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=powerline-fonts-git
-pkgver=1.r23.1458c31
+pkgver=1.r24.119276a
 pkgrel=1
 epoch=
 pkgdesc="Patched fonts for powerline"
