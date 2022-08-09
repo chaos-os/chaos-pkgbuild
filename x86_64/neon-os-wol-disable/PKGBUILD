@@ -1,18 +1,18 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
-pkgname=neon-os-configs-git
-pkgver=1.r20.986049c
+pkgname=neon-os-wol-disable
+pkgver=1.r10.07bb877
 pkgrel=1
 epoch=
-pkgdesc="config files for the neon-os arch distro"
+pkgdesc="wake-on-lan.conf file for neon-os to disable wol on NIC"
 arch=('x86_64')
-url="https://www.gitlab.com/NEON-MMD/dotfiles.git"
+url="https://www.gitlab.com/NEON-MMD/neon-os-system-configs.git"
 license=('GPL3')
 groups=()
 depends=()
 makedepends=(git)
 checkdepends=()
 optdepends=()
-provides=(neon-os-configs-git)
+provides=(neon-os-wol-disable)
 conflicts=()
 replaces=()
 backup=()
@@ -25,14 +25,14 @@ md5sums=('SKIP')
 validpgpkeys=()
 
 pkgver() {
-	cd "${_pkgname}"
+    cd neon-os-system-configs
     printf "1.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 package() {
-    cd dotfiles
-    mkdir -p ${pkgdir}/etc/${pkgname}
-    cp -rf * ${pkgdir}/etc/${pkgname}
+    cd neon-os-system-configs
+    mkdir -p ${pkgdir}/etc/NetworkManager/conf.d/
+    install -Dm755 wake-on-lan.conf "${pkgdir}/etc/NetworkManager/conf.d/wake-on-lan.conf" 
     install -Dm644 README.org "${pkgdir}/usr/share/doc/${pkgname}/README.org"
     install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }

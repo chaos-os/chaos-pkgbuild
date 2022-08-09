@@ -1,18 +1,18 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
-pkgname=neon-os-smartd
+pkgname=neon-os-watchdog-blacklist
 pkgver=1.r10.07bb877
 pkgrel=1
 epoch=
-pkgdesc="Smartd config for neon-os"
+pkgdesc="Blacklist.conf file for neon-os"
 arch=('x86_64')
-url="https://gitlab.com/NEON-MMD/neon-os-system-configs.git"
+url="https://www.gitlab.com/NEON-MMD/neon-os-system-configs.git"
 license=('GPL3')
 groups=()
 depends=()
 makedepends=(git)
 checkdepends=()
 optdepends=()
-provides=(neon-os-smartd)
+provides=(neon-os-watchdog-blacklist)
 conflicts=()
 replaces=()
 backup=()
@@ -31,11 +31,9 @@ pkgver() {
 
 package() {
     cd neon-os-system-configs
-    mkdir -p ${pkgdir}/etc/
-    mkdir -p ${pkgdir}/usr/share/smartmontools/smartd_warning.d
-    install -Dm755 smartd.conf ${pkgdir}/etc/
-    install -Dm755 smartdnotify ${pkgdir}/usr/share/smartmontools/smartd_warning.d/
+    mkdir -p ${pkgdir}/etc/modprobe.d/
+    install -Dm755 blacklist.conf "${pkgdir}/etc/modprobe.d/blacklist.conf" 
     install -Dm644 README.org "${pkgdir}/usr/share/doc/${pkgname}/README.org"
-    install -Dm643 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+    install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
 
