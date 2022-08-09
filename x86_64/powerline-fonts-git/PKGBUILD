@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=powerline-fonts-git
-pkgver=1.r27.76aede7
+pkgver=1.r202.e80e3eb
 pkgrel=1
 epoch=
 pkgdesc="Patched fonts for powerline"
@@ -25,14 +25,29 @@ md5sums=('SKIP')
 validpgpkeys=()
 
 pkgver() {
-	cd "${_pkgname}"
+	cd fonts
     printf "1.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
-	cd fonts
-    chmod +x install.sh
-    ./install.sh
+    cd fonts
+    # Set source and target directories
+    powerline_fonts_dir="$( cd "$( dirname "$0" )" && pwd )"
+    prefix=""
+    font_dir="/usr/share/fonts"
+    mkdir -p $font_dir
+    
+    # Copy all fonts to /usr/share/fonts
+    echo "Copying fonts..."
+    find "$powerline_fonts_dir" \( -name "$prefix*.[ot]tf" -or -name "$prefix*.pcf.gz" \) -type f -print0 | xargs -0 -n1 -I % cp "%" "$font_dir/"
+    
+    # Reset font cache on Linux
+    if which fc-cache >/dev/null 2>&1 ; then
+	echo "Resetting font cache, this may take a moment..."
+	fc-cache -f "$font_dir"
+    fi
+    
+    echo "Powerline fonts installed to $font_dir"
 }
 
 package() {
