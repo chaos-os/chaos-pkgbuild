@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-sddm-nvidia
-pkgver=1.r10.07bb877
+pkgver=1.r11.0ee1037
 pkgrel=1
 epoch=
 pkgdesc="sddm for system with optimus manager config for neon-os"
