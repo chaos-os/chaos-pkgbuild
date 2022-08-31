@@ -1,6 +1,6 @@
 post_install() {
     echo -e "###########################################################"
-    echo -e "## The icons can be found in /opt/neon-logout-git        ##"
+    echo -e "## The Aura config file can be found at /etc/aura.conf   ##"
     echo -e "###########################################################"
 }
 

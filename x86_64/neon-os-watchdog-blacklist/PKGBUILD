@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-watchdog-blacklist
-pkgver=1.r11.0ee1037
+pkgver=1.r12.3694513
 pkgrel=1
 epoch=
 pkgdesc="Blacklist.conf file for neon-os"
