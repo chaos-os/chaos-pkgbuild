@@ -1,9 +1,9 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
-pkgname=neon-os-aura
-pkgver=1.r12.3694513
+pkgname=neon-os-paru
+pkgver=1.r13.2927fcc
 pkgrel=1
 epoch=
-pkgdesc="Aura config for neon-os"
+pkgdesc="Paru config for neon-os"
 arch=('x86_64')
 url="https://gitlab.com/neon-os/neon-os-system-configs.git"
 license=('GPL3')
@@ -32,7 +32,7 @@ pkgver() {
 package() {
     cd neon-os-system-configs
     mkdir -p ${pkgdir}/etc/
-    install -Dm755 aura.conf ${pkgdir}/etc/
+    install -Dm755 paru.conf ${pkgdir}/etc/
     install -Dm644 README.org "${pkgdir}/usr/share/doc/${pkgname}/README.org"
     install -Dm643 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
