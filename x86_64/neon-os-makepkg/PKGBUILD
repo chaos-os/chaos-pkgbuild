@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-makepkg
-pkgver=1.r13.2927fcc
+pkgver=1.r15.0cb902f
 pkgrel=1
 epoch=
 pkgdesc="Makepkg config for neon-os"
