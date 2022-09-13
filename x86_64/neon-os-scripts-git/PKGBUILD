@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-scripts-git
-pkgver=1.r28.668a24c
+pkgver=1.r29.e11a7c8
 pkgrel=1
 epoch=
 pkgdesc="My dmenu, zenity, etc scripts for my custom arch distro neon-os"
