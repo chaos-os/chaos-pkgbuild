@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-environment
-pkgver=1.r15.0cb902f
+pkgver=1.r16.3742195
 pkgrel=1
 epoch=
 pkgdesc="Modified environment file for neon-os"
