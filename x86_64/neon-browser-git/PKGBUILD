@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-browser-git
-pkgver=0.r36.2482825.BETA
+pkgver=0.r37.83a6e92.BETA
 pkgrel=1
 epoch=
 pkgdesc="A minimalistic web browser"
@@ -8,7 +8,7 @@ arch=('x86_64')
 url="https://www.gitlab.com/utilities-n-apps/neon-browser.git"
 license=('GPL3')
 groups=()
-depends=(python-pyqt5 python-pyqt5-3d python-pyqt5-chart python-pyqt5-datavisualization python-pyqt5-networkauth python-pyqt5-purchasing python-pyqt5-webengine)
+depends=(python-pyqt5 python-pyqt5-3d python-pyqt5-chart python-pyqt5-datavisualization python-pyqt5-networkauth python-pyqt5-purchasing python-pyqt5-webengine python-numpy)
 makedepends=(git)
 checkdepends=()
 optdepends=(privoxy)
