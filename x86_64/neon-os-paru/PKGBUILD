@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-paru
-pkgver=1.r17.43d0a18
+pkgver=1.r18.b838a0f
 pkgrel=1
 epoch=
 pkgdesc="Paru config for neon-os"
