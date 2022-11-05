@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=VVallpapers-git
-pkgver=1.r6.3424a33
+pkgver=1.r7.904f672
 pkgrel=1
 epoch=
 pkgdesc="Vibrant and Vivid wallpapers for neon-os"
