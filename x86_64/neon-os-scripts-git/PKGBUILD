@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-scripts-git
-pkgver=1.r37.d796217
+pkgver=1.r38.807e0e5
 pkgrel=1
 epoch=
 pkgdesc="My dmenu, zenity, etc scripts for my custom arch distro neon-os"
@@ -38,9 +38,9 @@ package() {
 	install -Dm755 usr-scripts/gpu-hybrid-switcher.sh "${pkgdir}/usr/bin/gpu-hybrid-switcher"
 	install -Dm755 usr-scripts/article-viewer-convertor.sh "${pkgdir}/usr/bin/article-viewer-convertor"
 	install -Dm755 usr-scripts/battery-notifier.lua "${pkgdir}/usr/bin/battery-notifier"
-	install -Dm755 usr-scripts/common-websites.sh "${pkgdir}/usr/bin/common-websites"
+	install -Dm755 usr-scripts/common-websites.lua "${pkgdir}/usr/bin/common-websites"
 	install -Dm755 usr-scripts/google-meet.sh "${pkgdir}/usr/bin/google-meet"
-	install -Dm755 usr-scripts/search-engines.py "${pkgdir}/usr/bin/search-engines"
+	install -Dm755 usr-scripts/search-engines.lua "${pkgdir}/usr/bin/search-engines"
 	install -Dm755 usr-scripts/themes-changer.sh "${pkgdir}/usr/bin/themes-changer"
 	install -Dm755 usr-scripts/distro-updater.sh "${pkgdir}/usr/bin/distro-updater"
 	install -Dm755 usr-scripts/update-lsp.sh "${pkgdir}/usr/bin/update-lsp"
