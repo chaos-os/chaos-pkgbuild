@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-configs-git
-pkgver=1.r150.c03a205
+pkgver=1.r151.5e5feb4
 pkgrel=1
 epoch=
 pkgdesc="All config files for neon-os"
