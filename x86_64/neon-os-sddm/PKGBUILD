@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-sddm
-pkgver=1.r20.5a07899
+pkgver=1.r21.22c2fb9
 pkgrel=1
 epoch=
 pkgdesc="sddm config for neon-os"
