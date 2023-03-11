@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-reflector
-pkgver=1.r21.22c2fb9
+pkgver=1.r22.2eb65b9
 pkgrel=1
 epoch=
 pkgdesc="Pacman config for neon-os"
