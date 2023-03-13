@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-os-smartd
-pkgver=1.r22.2eb65b9
+pkgver=1.r24.f084a67
 pkgrel=1
 epoch=
 pkgdesc="Smartd config for neon-os"
