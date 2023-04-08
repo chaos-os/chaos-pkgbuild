@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=neon-podcaster-git
-pkgver=1.r10.339ca9b
+pkgver=1.r11.5b697be
 pkgrel=1
 epoch=
 pkgdesc="A command line podcast client"
