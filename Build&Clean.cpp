@@ -6,7 +6,7 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-  system("rm -rf ../sos-core/x86_64/*");
+  system("rm -rf ../chaos-core/x86_64/*");
   for (const auto &entry : filesystem::directory_iterator(string("x86_64"))) {
     system(("cd " + string(entry.path()) + "&& makepkg -cf --sign").c_str());
     for (const auto &pkg :
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
               "sig") {
         filesystem::rename(
             string(pkg.path()),
-            "../sos-core/x86_64/" +
+            "../chaos-core/x86_64/" +
                 string(pkg.path()).substr(string(entry.path()).length() + 1));
       }
       if (filesystem::is_directory(string(pkg.path()))) {
