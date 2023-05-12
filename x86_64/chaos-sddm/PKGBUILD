@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=chaos-sddm
-pkgver=1.r27.57158bc
+pkgver=1.r29.0c835b9
 pkgrel=1
 epoch=
 pkgdesc="sddm config for neon-os"

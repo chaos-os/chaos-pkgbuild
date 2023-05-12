@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=chaos-scripts-git
-pkgver=1.r43.b9fe2f7
+pkgver=1.r44.860e4ce
 pkgrel=1
 epoch=
 pkgdesc="My dmenu, zenity, etc scripts for my custom arch distro neon-os"
@@ -46,6 +46,7 @@ package() {
 	install -Dm755 usr-scripts/update-lsp.sh "${pkgdir}/usr/bin/update-lsp"
 	install -Dm755 usr-scripts/flatpak-launcher.sh "${pkgdir}/usr/bin/flatpak-launcher"
 	install -Dm755 usr-scripts/update-notifier.lua "${pkgdir}/usr/bin/update-notifier"
+	install -Dm755 usr-scripts/update-configs.sh "${pkgdir}/usr/bin/update-configs"
 	install -Dm755 usr-scripts/touchpad.sh "${pkgdir}/usr/bin/touchpad"
 	cp -rf script-dependencies/ ${pkgdir}/etc/neon-os/.config/
 	install -Dm644 README.org "${pkgdir}/usr/share/doc/${pkgname}/README.org"

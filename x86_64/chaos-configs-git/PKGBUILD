@@ -1,11 +1,11 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=chaos-configs-git
-pkgver=1.r158.b43feed
+pkgver=1.r160.9f4ff41
 pkgrel=1
 epoch=
 pkgdesc="All config files for neon-os"
 arch=('x86_64')
-url="https://www.github.com/neon-mmd/dotfiles.git"
+url="https://www.github.com/chaos-os/chaos-configs.git"
 license=('GPL3')
 groups=()
 depends=()
@@ -25,14 +25,14 @@ md5sums=('SKIP')
 validpgpkeys=()
 
 pkgver() {
-    cd dotfiles
+    cd chaos-configs
     printf "1.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 package() {
     mkdir -p "${pkgdir}/etc/neon-os/"
-    cp -rf dotfiles "${pkgdir}/etc/neon-os/"
-    cd dotfiles
+    cp -rf chaos-configs "${pkgdir}/etc/neon-os/"
+    cd chaos-configs
     install -Dm644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.org"
     install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
