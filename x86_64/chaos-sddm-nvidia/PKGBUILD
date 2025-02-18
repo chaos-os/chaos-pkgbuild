@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=chaos-sddm-nvidia
-pkgver=1.r29.0c835b9
+pkgver=1.r34.899611f
 pkgrel=1
 epoch=
 pkgdesc="sddm for system with optimus manager config for neon-os"

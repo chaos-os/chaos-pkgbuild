@@ -1,6 +1,6 @@
 post_install() {
     echo -e "############################################################################################"
-    echo -e "## The wake-on-lan.conf file can be found in /etc/NetworkManager/conf.d/wake-on-lan.conf  ##"
+    echo -e "## The config files can be found in /etc/NetworkManager/conf.d/                           ##"
     echo -e "############################################################################################"
 }
 

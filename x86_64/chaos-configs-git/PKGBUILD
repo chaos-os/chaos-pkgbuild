@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=chaos-configs-git
-pkgver=1.r160.9f4ff41
+pkgver=1.r161.bc751e2
 pkgrel=1
 epoch=
 pkgdesc="All config files for neon-os"

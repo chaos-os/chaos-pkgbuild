@@ -1,9 +1,9 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
-pkgname=chaos-sysctl
+pkgname=chaos-ioschedulers
 pkgver=1.r34.899611f
 pkgrel=1
 epoch=
-pkgdesc="sysctl config for neon-os"
+pkgdesc="ioschedulers config for chaos"
 arch=('x86_64')
 url="https://www.github.com/chaos-os/chaos-system-configs.git"
 license=('GPL3')
@@ -12,7 +12,7 @@ depends=()
 makedepends=(git)
 checkdepends=()
 optdepends=()
-provides=(chaos-sysctl)
+provides=(chaos-ioschedulers)
 conflicts=()
 replaces=()
 backup=()
@@ -31,10 +31,8 @@ pkgver() {
 
 package() {
 	cd chaos-system-configs
-	mkdir -p ${pkgdir}/etc/sysctl.d/
-	install -Dm755 20-quiet-printk.conf ${pkgdir}/etc/sysctl.d/20-quiet-printk.conf
-	install -Dm755 50-coredump.conf ${pkgdir}/etc/sysctl.d/50-coredump.conf
-	install -Dm755 99-sysctl.conf ${pkgdir}/etc/sysctl.d/99-sysctl.conf
+	mkdir -p ${pkgdir}/etc/udev/rules.d/
+	install -Dm755 60-ioschedulers.rules ${pkgdir}/etc/udev/rules.d/60-ioschedulers.rules
 	install -Dm644 README.org "${pkgdir}/usr/share/doc/${pkgname}/README.org"
 	install -Dm643 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
