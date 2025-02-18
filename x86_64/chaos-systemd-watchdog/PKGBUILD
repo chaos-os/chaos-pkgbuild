@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=chaos-systemd-watchdog
-pkgver=1.r35.de81587
+pkgver=1.r36.101ee07
 pkgrel=1
 epoch=
 pkgdesc="systemd watchdog config for chaos"
