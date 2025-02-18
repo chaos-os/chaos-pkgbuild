@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=chaos-environment
-pkgver=1.r34.899611f
+pkgver=1.r35.de81587
 pkgrel=1
 epoch=
 pkgdesc="Modified environment file for neon-os"
