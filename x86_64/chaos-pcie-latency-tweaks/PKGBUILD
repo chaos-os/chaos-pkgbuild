@@ -1,0 +1,41 @@
+# Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
+pkgname=chaos-pcie-latency-tweaks
+pkgver=1.r2.2f379a5
+pkgrel=1
+epoch=
+pkgdesc="Script to tweak PCI-E latency for desktop interactivity."
+arch=('x86_64')
+url="https://www.github.com/chaos-os/chaos-pcie-latency-tweaks.git"
+license=('GPL3')
+groups=()
+depends=()
+makedepends=(git)
+checkdepends=()
+optdepends=()
+provides=(chaos-pcie-latency-tweaks)
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=${pkgname}.install
+changelog=
+source=("git+$url")
+noextract=()
+md5sums=('SKIP')
+validpgpkeys=()
+
+pkgver() {
+    cd chaos-pcie-latency-tweaks
+    printf "1.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+    cd chaos-pcie-latency-tweaks
+    mkdir -p "${pkgdir}/usr/lib/systemd/system/"
+    mkdir -p "${pkgdir}/usr/lib/pcie-latency/"
+    install -Dm755 set-pcie-latency.service ${pkgdir}/usr/lib/systemd/system/
+    install -Dm755 set-pcie-latency.sh ${pkgdir}/usr/lib/pcie-latency/
+    install -Dm644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.md"
+    install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
+

@@ -1,6 +1,6 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
 pkgname=chaos-dns
-pkgver=1.r36.101ee07
+pkgver=1.r37.d645c52
 pkgrel=1
 epoch=
 pkgdesc="Systemd resolver config for neon-os for better dns"
