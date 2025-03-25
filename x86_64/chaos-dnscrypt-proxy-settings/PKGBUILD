@@ -1,9 +1,9 @@
 # Maintainer: pkg_maintainer <archlinuxpackagemaintainer@gmail.com>
-pkgname=chaos-unbound-settings
-pkgver=1.r42.f95d92a
+pkgname=chaos-dnscrypt-proxy-settings
+pkgver=1.r43.1bc165b
 pkgrel=1
 epoch=
-pkgdesc="Unbound config for configuring self-hosted unbound dns server."
+pkgdesc="Dnscrypt proxy config for configuring dnscrypt-proxy service"
 arch=('x86_64')
 url="https://www.github.com/chaos-os/chaos-system-configs.git"
 license=('GPL3')
@@ -12,7 +12,7 @@ depends=()
 makedepends=(git)
 checkdepends=()
 optdepends=()
-provides=(chaos-unbound-settings)
+provides=(chaos-dnscrypt-proxy-settings)
 conflicts=()
 replaces=()
 backup=()
@@ -30,9 +30,12 @@ pkgver() {
 }
 
 package() {
-	cd chaos-system-configs
-	mkdir -p "${pkgdir}/etc/unbound/"
-	install -Dm755 unbound.conf ${pkgdir}/etc/unbound/unbound.conf
+	cd chaos-system-configs/dnscrypt-proxy/
+	mkdir -p "${pkgdir}/etc/dnscrypt-proxy/"
+	mkdir -p "${pkgdir}/usr/lib/systemd/system/"
+	install -Dm755 dnscrypt-proxy.toml ${pkgdir}/etc/dnscrypt-proxy/dnscrypt-proxy.toml
+	install -Dm755 dnscrypt-proxy.socket ${pkgdir}/usr/lib/systemd/system/dnscrypt-proxy.socket
+    cd ../
 	install -Dm644 README.org "${pkgdir}/usr/share/doc/${pkgname}/README.org"
 	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
